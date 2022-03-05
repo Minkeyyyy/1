@@ -2,7 +2,6 @@ import cv2
 import numpy as np
 import time
 import PoseModule as pm
-# cap = cv2.VideoCapture("AiTrainer/curls.mp4")
 cap = cv2.VideoCapture(0)
 detector = pm.poseDetector()
 count = 0
@@ -11,10 +10,10 @@ pTime = 0
 while True:
     success, img = cap.read()
     img = cv2.resize(img, (1280, 720))
-    # img = cv2.imread("AiTrainer/test.jpg")
-    img = detector.findPose(img, False)
+    img = detector.findPose(img, False)  # 해당 좌표들을 제외하고는 그리지 않음
+    # 포지션을 그리진 않음
     lmList = detector.findPosition(img, False)
-    # print(lmList)
+    # print(lmList) # 전체 좌표가 나옴
     if len(lmList) != 0:
         # Right Arm
         angle = detector.findAngle(img, 12, 14, 16)
