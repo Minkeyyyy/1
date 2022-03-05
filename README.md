@@ -9,3 +9,7 @@ Pose Tracking with OpenCV
 # 자세 판단(Pose Estimation) 모듈&예시
 
 - https://minggoo.tistory.com/160
+
+# 관절 각도 계산
+
+- https://minggoo.tistory.com/162
