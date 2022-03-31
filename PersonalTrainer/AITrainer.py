@@ -3,6 +3,7 @@ import numpy as np
 import time
 import PoseModule as pm
 cap = cv2.VideoCapture(0)
+# cap = cv2.VideoCapture('PersonalTrainer/video.mp4')
 detector = pm.poseDetector()
 count = 0
 dir = 0
